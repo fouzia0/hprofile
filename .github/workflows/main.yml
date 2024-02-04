@@ -1,8 +1,16 @@
-name: fouzia Actions
-on: workflow_dispatch
-jobs: 
-  Testing:
+name: My Workflow
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
     runs-on: ubuntu-latest
     steps:
-      -name: Testing workflow
-       
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run tests
+        run: |
+          npm install
+          npm test
+
