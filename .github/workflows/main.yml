@@ -1,13 +1,10 @@
-name: My Workflow
-on:
-  push:
-    branches:
-      - main
+name: Hprofile Actions
+on: workflow-dispatch
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  Testing:
+    run-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Run test
+      - name: testing workflow
+       run: echo "workflow works!"
+
 
